@@ -1,9 +1,8 @@
 import React,{useState} from 'react'
 
-export default function Todoinput(props) {
+export default function TodoInput(props) {
 
-  const { handleAddTodos } = props
-  const [todoValue, setTodoValue] =useState("")
+  const {handleAddTodos,todoValue, setTodoValue} =props
 
   return (
     <header>
