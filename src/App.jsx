@@ -1,6 +1,8 @@
-import React, { useState,useEffect } from "react"
-import Todoinput from "./components/TodoInput"
-import Todolist from "./components/TodoList"
+"use client"
+
+import { useState,useEffect } from "react"
+import Todoinput from "./components/Todoinput"
+import Todolist from "./components/Todolist"
 
 
 
@@ -45,17 +47,24 @@ function App() {
       return
     }
 
-    console.log(localTodos)
     localTodos = JSON.parse(localTodos).todos
     setTodos(localTodos)
 
   },[])
 
   return (
-    <>
-      <Todoinput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos}/>
-      <Todolist handleEditTodo={handleEditTodo} handleDeleteTodo={handleDeleteTodo} todos={todos}/>
-    </>
+    <div className="app-shell">
+      <main className="todo-app">
+        <section className="todo-header">
+          <p className="todo-kicker">Everyday Planner</p>
+          <h1>My Todo List</h1>
+          <p className="todo-subtitle">Capture tasks quickly and keep your day moving.</p>
+        </section>
+
+        <Todoinput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos}/>
+        <Todolist handleEditTodo={handleEditTodo} handleDeleteTodo={handleDeleteTodo} todos={todos}/>
+      </main>
+    </div>
   )
 }
 

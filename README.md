@@ -1,8 +1,17 @@
-# React + Vite
+# Next.js Todo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is now powered by Next.js (App Router) and keeps the existing todo-list functionality and styling.
 
-Currently, two official plugins are available:
+## Scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- `npm run dev` starts the development server.
+- `npm run build` builds for production.
+- `npm run start` starts the production server.
+- `npm run lint` runs ESLint.
+
+## Project Structure
+
+- `src/app/layout.jsx` root layout and global stylesheet import.
+- `src/app/page.jsx` home page route.
+- `src/App.jsx` client-side todo app logic.
+- `src/components/*` reusable todo components.
